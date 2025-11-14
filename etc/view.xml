@@ -1,4 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
-    <!-- You can override image properties and other view settings here -->
+    <vars module="Magento_Backend">
+        <var name="enable_js_sourcemap">false</var>
+    </vars>
 </view>
