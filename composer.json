@@ -1,25 +1,32 @@
 {
-  "name": "gardenlawn/admintheme",
-  "description": "Admin theme",
-  "type": "magento2-theme",
-  "config": {
-    "sort-packages": true
-  },
-  "version": "1.0.0",
-  "require": {
-    "php": ">=8.3.0",
-    "magento/product-community-edition": "^2.4.8",
-    "hyva-themes/magento2-theme-module": "*"
-  },
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "gardenlawn/admintheme",
+    "description": "Admin theme",
+    "type": "magento2-theme",
+    "config": {
+        "sort-packages": true
+    },
+    "version": "1.0.0",
+    "require": {
+        "php": ">=8.3.0",
+        "magento/product-community-edition": "^2.4.8",
+        "hyva-themes/magento2-theme-module": "*",
+        "gardenlawn/core": "*",
+        "gardenlawn/seo": "*",
+        "gardenlawn/delivery": "*",
+        "gardenlawn/log-viewer": "*",
+        "gardenlawn/module-admincommands": "*",
+        "gardenlawn/company": "*",
+        "gardenlawn/mediagallery": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rafał Piechota",
+            "email": "marcin.piechota@gardenlawn.pl"
+        }
     ]
-  },
-  "authors": [
-    {
-      "name": "Rafał Piechota",
-      "email": "marcin.piechota@gardenlawn.pl"
-    }
-  ]
 }
