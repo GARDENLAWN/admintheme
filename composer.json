@@ -13,6 +13,7 @@
         "hyva-themes/module-magento2-admin": "*",
         "gardenlawn/core": "*",
         "gardenlawn/seo": "*",
+        "gardenlawn/trans_eu": "*",
         "gardenlawn/delivery": "*",
         "gardenlawn/log-viewer": "*",
         "gardenlawn/module-admincommands": "*",
