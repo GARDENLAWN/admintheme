@@ -1,30 +1,14 @@
 {
-  "name": "hyva-admin",
+  "name": "gardenlawn-admintheme",
   "version": "1.0.0",
-  "description": "Hyva-Admin tailwind",
-  "main": "postcss.config.js",
-  "dependencies": {
-    "autoprefixer": "^10.4.16",
-    "csso-cli": "^3.0.0",
-    "postcss": "^8.4.31",
-    "postcss-cli": "^8.3.1",
-    "postcss-import": "^16.1.1",
-    "postcss-nested": "^6.0.1",
-    "tailwindcss": "^2.2.19",
-    "terser": "^4.7.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.3.4"
-  },
+  "description": "Tailwind build for GardenLawn Admin Theme",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx postcss tailwind-source.css -o tailwind-output.css",
-    "minify": "npx csso tailwind-output.css --output ../css/gardenlawn-admin.css",
-    "build-dev": "NODE_ENV=development npm run build && cp tailwind-output.css ../css/gardenlawn-admin.css && npm run output-success",
-    "build-prod": "NODE_ENV=production npm run build && npm run minify && npm run output-success",
-    "output-success": "echo \"\\033[0;32mDone!\\033[0m\""
+    "build": "npx tailwindcss -i tailwind-source.css -o ../css/gardenlawn-admin.css",
+    "watch": "npx tailwindcss -i tailwind-source.css -o ../css/gardenlawn-admin.css --watch"
   },
-  "author": "",
-  "license": "ISC",
-  "private": true
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
 }

@@ -1,288 +1,74 @@
-/* @import "tailwindcss/base"; - Wyłączamy base, aby nie psuć stylów Magento */
+@import "tailwindcss";
 
-.hyva-admin-grid input, .hyva-admin-grid select {
-    font-size: 1em;
-    line-height: 1.5em;
-    --tw-border-opacity: 1;
-    border-color: rgba(212, 212, 216, var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    border-width: 1px;
-  }
+/* Scan files for classes */
+@source "../../**/*.phtml";
+@source "../../../../../../code/GardenLawn/**/*.phtml";
+@source "../../../../../../vendor/hyva-themes/module-magento2-admin/view/adminhtml/templates/**/*.phtml";
 
-.hyva-admin-grid input:hover, .hyva-admin-grid select:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  }
+@theme {
+    --color-primary: #eb5202;
+    --color-primary-dark: #d44902;
 
-.hyva-admin-grid input, .hyva-admin-grid select {
-    align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-radius: 0.375rem;
-    --tw-text-opacity: 1;
-    color: rgba(63, 63, 70, var(--tw-text-opacity));
-  }
-
-.hyva-admin-grid [type="checkbox"] {
-    box-sizing: border-box;
-    padding: 0px;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-.hyva-admin-grid .form-checkbox:checked {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
-    border-color: transparent;
-    background-color: currentColor;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-.hyva-admin-grid .form-select {
-    cursor: pointer;
-  }
-
-.text-sans-serif {
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    /* Admin specific colors */
+    --color-admin-bg: #f5f5f5;
+    --color-admin-border: #d1d1d1;
 }
 
-.hyva-admin-grid {
-  font-size: 14px;
-  line-height: 16px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0em;
-  --tw-text-opacity: 1;
-  color: rgba(0, 0, 0, var(--tw-text-opacity));
-}
-
-.menu-wrapper .logo .logo-img { display: inline;
-}
-
-[x-cloak] {
-  display: none;
-}
-
-img { max-width: none; display: inline-block;
-}
-
-.table-head th, .table-filters th{
-  position: sticky;
-  top: 0px;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(212, 212, 216, var(--tw-border-opacity));
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  /*@apply uppercase;*/
-  font-size: 1em;
-  line-height: 1.5em;
-  vertical-align: middle;
-}
-
-.table-head th.sortable, .table-filters th.sortable {
-    cursor: pointer;
-    padding-right: 3rem;
-  }
-
-.table-head th {
-  --tw-bg-opacity: 1;
-  background-color: rgba(81, 73, 67, var(--tw-bg-opacity));
-}
-
-.table-head th:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(95, 86, 79, var(--tw-bg-opacity));
-}
-
-.table-head th {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.table-filters th{
-  --tw-bg-opacity: 1;
-  background-color: rgba(228, 228, 231, var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgba(81, 73, 67, var(--tw-text-opacity));
-}
-
-.table-content td {
-  white-space: nowrap;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(228, 228, 231, var(--tw-border-opacity));
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  vertical-align: middle;
-}
-
-.table-filters th {
-  white-space: nowrap;
-  --tw-border-opacity: 1;
-  border-color: rgba(228, 228, 231, var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgba(244, 244, 245, var(--tw-bg-opacity));
-}
-
-.table-filters th input {
-    margin-top: 0.25rem;
-    display: block;
-    width: 100%;
-    border-radius: 0.375rem
-  }
-
-.table-filters th input:focus {
-    --tw-border-opacity: 1;
-    border-color: rgba(113, 113, 122, var(--tw-border-opacity));
-  }
-
-.table-filters th input {
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  }
-
-.table-filters th input:focus {
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-  }
-
-.table-filters th input {
-    background-size: auto;
-  }
-
-.btn {
-  display: flex;
-  align-items: center;
-  --tw-bg-opacity: 1;
-  background-color: rgba(113, 113, 122, var(--tw-bg-opacity));
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.btn svg {
-    display: inline-flex;
-  }
-
-.btn span {
-    vertical-align: middle;
-  }
-
-.btn:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgba(82, 82, 91, var(--tw-bg-opacity));
-  }
-
-.btn-primary {
-    border-width: 1px;
-    --tw-border-opacity: 1;
-    border-color: rgba(95, 86, 79, var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgba(245, 245, 245, var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(81, 73, 67, var(--tw-text-opacity));
-  }
-
-.btn-primary:hover {
-      border-width: 1px;
-      --tw-border-opacity: 1;
-      border-color: rgba(95, 86, 79, var(--tw-border-opacity));
-      --tw-bg-opacity: 1;
-      background-color: rgba(219, 219, 219, var(--tw-bg-opacity));
-      --tw-text-opacity: 1;
-      color: rgba(81, 73, 67, var(--tw-text-opacity));
-      text-decoration: none;
-      --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+/* Custom Admin Styles */
+@layer components {
+    .mailsync-outlook {
+        height: calc(100vh - 120px);
+        @apply flex bg-white border border-gray-300 overflow-hidden;
     }
 
-.btn-secondary {
-    border-width: 2px;
-    --tw-border-opacity: 1;
-    border-color: rgba(212, 212, 216, var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(0, 0, 0, var(--tw-text-opacity));
-  }
-
-.btn-secondary:hover {
-      --tw-border-opacity: 1;
-      border-color: rgba(95, 86, 79, var(--tw-border-opacity));
-      --tw-bg-opacity: 1;
-      background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-      --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    .mailsync-sidebar {
+        @apply w-64 bg-gray-100 border-r border-gray-200 flex flex-col;
     }
 
-@keyframes tw-spin {
-  to {
-    transform: rotate(360deg);
-  }
+    .mailsync-folder-item {
+        @apply px-6 py-3 cursor-pointer flex items-center gap-3 text-gray-700 text-sm hover:bg-gray-200;
+    }
+
+    .mailsync-folder-item.active {
+        @apply bg-gray-200 font-bold text-black;
+    }
+
+    .action-btn {
+        @apply px-4 py-2 rounded font-semibold cursor-pointer border transition-colors;
+    }
+
+    .action-btn.primary {
+        /* Use the theme color name directly */
+        @apply bg-primary text-white border-transparent hover:bg-primary-dark;
+    }
+
+    .action-btn.secondary {
+        @apply bg-white text-gray-800 border-gray-300 hover:bg-gray-50;
+    }
 }
 
-@keyframes tw-ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
+/* Admin Fixes (Restore Magento styles broken by Preflight) */
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: revert;
+        font-weight: revert;
+        margin: revert;
+    }
+    ul, ol {
+        list-style: revert;
+        margin: revert;
+        padding: revert;
+    }
+    a {
+        color: revert;
+        text-decoration: revert;
+    }
+    button, input, optgroup, select, textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+    }
 }
 
-@keyframes tw-pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-@keyframes tw-bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-*, ::before, ::after {
-  --tw-shadow: 0 0 #0000;
-}
-
-*, ::before, ::after {
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgba(59, 130, 246, 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-}
-
-@media (min-width: 640px) {
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 1024px) {
-}
-
-@media (min-width: 1280px) {
-}
-
-@media (min-width: 1536px) {
-}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRhaWx3aW5kLXNvdXJjZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoidGFpbHdpbmQtb3V0cHV0LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCJ0YWlsd2luZGNzc1wiO1xuXG4vKiBTY2FuIGZpbGVzIGZvciBjbGFzc2VzICovXG5Ac291cmNlIFwiLi4vLi4vKiovKi5waHRtbFwiO1xuQHNvdXJjZSBcIi4uLy4uLy4uLy4uLy4uLy4uL2NvZGUvR2FyZGVuTGF3bi8qKi8qLnBodG1sXCI7XG5Ac291cmNlIFwiLi4vLi4vLi4vLi4vLi4vLi4vdmVuZG9yL2h5dmEtdGhlbWVzL21vZHVsZS1tYWdlbnRvMi1hZG1pbi92aWV3L2FkbWluaHRtbC90ZW1wbGF0ZXMvKiovKi5waHRtbFwiO1xuXG5AdGhlbWUge1xuICAgIC0tY29sb3ItcHJpbWFyeTogI2ViNTIwMjtcbiAgICAtLWNvbG9yLXByaW1hcnktZGFyazogI2Q0NDkwMjtcblxuICAgIC8qIEFkbWluIHNwZWNpZmljIGNvbG9ycyAqL1xuICAgIC0tY29sb3ItYWRtaW4tYmc6ICNmNWY1ZjU7XG4gICAgLS1jb2xvci1hZG1pbi1ib3JkZXI6ICNkMWQxZDE7XG59XG5cbi8qIEN1c3RvbSBBZG1pbiBTdHlsZXMgKi9cbkBsYXllciBjb21wb25lbnRzIHtcbiAgICAubWFpbHN5bmMtb3V0bG9vayB7XG4gICAgICAgIGhlaWdodDogY2FsYygxMDB2aCAtIDEyMHB4KTtcbiAgICAgICAgQGFwcGx5IGZsZXggYmctd2hpdGUgYm9yZGVyIGJvcmRlci1ncmF5LTMwMCBvdmVyZmxvdy1oaWRkZW47XG4gICAgfVxuXG4gICAgLm1haWxzeW5jLXNpZGViYXIge1xuICAgICAgICBAYXBwbHkgdy02NCBiZy1ncmF5LTEwMCBib3JkZXItciBib3JkZXItZ3JheS0yMDAgZmxleCBmbGV4LWNvbDtcbiAgICB9XG5cbiAgICAubWFpbHN5bmMtZm9sZGVyLWl0ZW0ge1xuICAgICAgICBAYXBwbHkgcHgtNiBweS0zIGN1cnNvci1wb2ludGVyIGZsZXggaXRlbXMtY2VudGVyIGdhcC0zIHRleHQtZ3JheS03MDAgdGV4dC1zbSBob3ZlcjpiZy1ncmF5LTIwMDtcbiAgICB9XG5cbiAgICAubWFpbHN5bmMtZm9sZGVyLWl0ZW0uYWN0aXZlIHtcbiAgICAgICAgQGFwcGx5IGJnLWdyYXktMjAwIGZvbnQtYm9sZCB0ZXh0LWJsYWNrO1xuICAgIH1cblxuICAgIC5hY3Rpb24tYnRuIHtcbiAgICAgICAgQGFwcGx5IHB4LTQgcHktMiByb3VuZGVkIGZvbnQtc2VtaWJvbGQgY3Vyc29yLXBvaW50ZXIgYm9yZGVyIHRyYW5zaXRpb24tY29sb3JzO1xuICAgIH1cblxuICAgIC5hY3Rpb24tYnRuLnByaW1hcnkge1xuICAgICAgICAvKiBVc2UgdGhlIHRoZW1lIGNvbG9yIG5hbWUgZGlyZWN0bHkgKi9cbiAgICAgICAgQGFwcGx5IGJnLXByaW1hcnkgdGV4dC13aGl0ZSBib3JkZXItdHJhbnNwYXJlbnQgaG92ZXI6YmctcHJpbWFyeS1kYXJrO1xuICAgIH1cblxuICAgIC5hY3Rpb24tYnRuLnNlY29uZGFyeSB7XG4gICAgICAgIEBhcHBseSBiZy13aGl0ZSB0ZXh0LWdyYXktODAwIGJvcmRlci1ncmF5LTMwMCBob3ZlcjpiZy1ncmF5LTUwO1xuICAgIH1cbn1cblxuLyogQWRtaW4gRml4ZXMgKFJlc3RvcmUgTWFnZW50byBzdHlsZXMgYnJva2VuIGJ5IFByZWZsaWdodCkgKi9cbkBsYXllciBiYXNlIHtcbiAgICBoMSwgaDIsIGgzLCBoNCwgaDUsIGg2IHtcbiAgICAgICAgZm9udC1zaXplOiByZXZlcnQ7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiByZXZlcnQ7XG4gICAgICAgIG1hcmdpbjogcmV2ZXJ0O1xuICAgIH1cbiAgICB1bCwgb2wge1xuICAgICAgICBsaXN0LXN0eWxlOiByZXZlcnQ7XG4gICAgICAgIG1hcmdpbjogcmV2ZXJ0O1xuICAgICAgICBwYWRkaW5nOiByZXZlcnQ7XG4gICAgfVxuICAgIGEge1xuICAgICAgICBjb2xvcjogcmV2ZXJ0O1xuICAgICAgICB0ZXh0LWRlY29yYXRpb246IHJldmVydDtcbiAgICB9XG4gICAgYnV0dG9uLCBpbnB1dCwgb3B0Z3JvdXAsIHNlbGVjdCwgdGV4dGFyZWEge1xuICAgICAgICBmb250LWZhbWlseTogaW5oZXJpdDtcbiAgICAgICAgZm9udC1zaXplOiAxMDAlO1xuICAgICAgICBsaW5lLWhlaWdodDogMS4xNTtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgIH1cbn1cbiJdfQ== */
