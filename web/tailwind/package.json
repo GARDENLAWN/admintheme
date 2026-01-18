@@ -1,0 +1,16 @@
+{
+  "name": "gardenlawn-admintheme",
+  "version": "1.0.0",
+  "description": "Tailwind build for GardenLawn Admin Theme",
+  "scripts": {
+    "build": "npx tailwindcss -i ./source.css -o ../css/styles.css --minify",
+    "watch": "npx tailwindcss -i ./source.css -o ../css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss": "^8.0.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.0"
+  }
+}
