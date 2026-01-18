@@ -18,7 +18,8 @@
         "gardenlawn/log-viewer": "*",
         "gardenlawn/module-admincommands": "*",
         "gardenlawn/company": "*",
-        "gardenlawn/mediagallery": "*"
+        "gardenlawn/mediagallery": "*",
+        "gardenlawn/module-mailsync": "*"
     },
     "autoload": {
         "files": [
