@@ -1,0 +1,46 @@
+@import "tailwindcss" prefix(tw);
+
+/* Scan files for classes */
+@source "../../**/*.phtml";
+@source "../../../../../../code/GardenLawn/**/*.phtml";
+@source "../../../../../../vendor/hyva-themes/module-magento2-admin/view/adminhtml/templates/**/*.phtml";
+
+@theme {
+    --color-primary: #eb5202;
+    --color-primary-dark: #d44902;
+
+    /* Admin specific colors */
+    --color-admin-bg: #f5f5f5;
+    --color-admin-border: #d1d1d1;
+}
+
+/* Custom Admin Styles */
+@layer components {
+    .mailsync-outlook {
+        @apply tw:flex tw:h-screen tw:bg-white tw:border tw:border-gray-300 tw:overflow-hidden;
+    }
+
+    .mailsync-sidebar {
+        @apply tw:w-64 tw:bg-gray-100 tw:border-r tw:border-gray-200 tw:flex tw:flex-col;
+    }
+
+    .mailsync-folder-item {
+        @apply tw:px-6 tw:py-3 tw:cursor-pointer tw:flex tw:items-center tw:gap-3 tw:text-gray-700 tw:text-sm tw:hover:tw:bg-gray-200;
+    }
+
+    .mailsync-folder-item.active {
+        @apply tw:bg-gray-200 tw:font-bold tw:text-black;
+    }
+
+    .action-btn {
+        @apply tw:px-4 tw:py-2 tw:rounded tw:font-semibold tw:cursor-pointer tw:border tw:transition-colors;
+    }
+
+    .action-btn.primary {
+        @apply tw:bg-[var(--color-primary)] tw:text-white tw:border-transparent tw:hover:tw:bg-[var(--color-primary-dark)];
+    }
+
+    .action-btn.secondary {
+        @apply tw:bg-white tw:text-gray-800 tw:border-gray-300 tw:hover:tw:bg-gray-50;
+    }
+}
