@@ -1,5 +1,5 @@
 /* purgecss start ignore */
-@import "tailwindcss/base";
+/* @import "tailwindcss/base"; - Wyłączamy base, aby nie psuć stylów Magento */
 @import "tailwindcss/components";
 
 @import url('components/forms.css');

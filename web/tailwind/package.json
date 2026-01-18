@@ -19,8 +19,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx postcss tailwind-source.css -o tailwind-output.css",
-    "minify": "npx csso tailwind-output.css --output ../css/styles.css",
-    "build-dev": "NODE_ENV=development npm run build && cp tailwind-output.css ../css/styles.css && npm run output-success",
+    "minify": "npx csso tailwind-output.css --output ../css/gardenlawn-admin.css",
+    "build-dev": "NODE_ENV=development npm run build && cp tailwind-output.css ../css/gardenlawn-admin.css && npm run output-success",
     "build-prod": "NODE_ENV=production npm run build && npm run minify && npm run output-success",
     "output-success": "echo \"\\033[0;32mDone!\\033[0m\""
   },

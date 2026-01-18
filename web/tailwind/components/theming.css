@@ -1,30 +1,30 @@
 .btn {
-    @apply flex bg-gray-500 px-4 py-2 text-white font-semibold items-center;
+    @apply tw-flex tw-bg-gray-500 tw-px-4 tw-py-2 tw-text-white tw-font-semibold tw-items-center;
 
     svg {
-        @apply inline-flex;
+        @apply tw-inline-flex;
     }
     span {
         vertical-align: middle;
     }
 
     &:hover {
-        @apply bg-gray-600;
+        @apply tw-bg-gray-600;
     }
 
     &-primary {
-        @apply bg-primary border border-primary-darker text-primary;
+        @apply tw-bg-primary tw-border tw-border-primary-darker tw-text-primary;
 
         &:hover {
-            @apply bg-primary-darker border border-primary-darker text-primary shadow-sm no-underline;
+            @apply tw-bg-primary-darker tw-border tw-border-primary-darker tw-text-primary tw-shadow-sm tw-no-underline;
         }
     }
 
     &-secondary {
-        @apply bg-white border-2 border-primary-lighter text-black;
+        @apply tw-bg-white tw-border-2 tw-border-primary-lighter tw-text-black;
 
         &:hover {
-            @apply bg-white border-primary-darker shadow-sm;
+            @apply tw-bg-white tw-border-primary-darker tw-shadow-sm;
         }
     }
 }

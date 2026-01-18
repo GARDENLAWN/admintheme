@@ -1,40 +1,40 @@
 
 .table-head th, .table-filters th{
-    @apply sticky;
-    @apply top-0;
-    @apply border;
-    @apply border-container-darker;
-    @apply px-6;
-    @apply py-2;
-    @apply font-semibold;
-    @apply tracking-wider;
+    @apply tw-sticky;
+    @apply tw-top-0;
+    @apply tw-border;
+    @apply tw-border-container-darker;
+    @apply tw-px-6;
+    @apply tw-py-2;
+    @apply tw-font-semibold;
+    @apply tw-tracking-wider;
     /*@apply uppercase;*/
-    @apply text-base;
-    @apply align-middle;
+    @apply tw-text-base;
+    @apply tw-align-middle;
 
     &.sortable {
-        @apply cursor-pointer;
-        @apply pr-12;
+        @apply tw-cursor-pointer;
+        @apply tw-pr-12;
     }
 }
 .table-head th {
-    @apply bg-container-header;
-    @apply hover:bg-container-hover;
-    @apply text-white;
+    @apply tw-bg-container-header;
+    @apply hover:tw-bg-container-hover;
+    @apply tw-text-white;
 }
 .table-filters th{
-    @apply bg-container-darker;
-    @apply text-primary;
+    @apply tw-bg-container-darker;
+    @apply tw-text-primary;
 }
 
 .table-content td {
-    @apply border border-container px-3 align-middle whitespace-nowrap;
+    @apply tw-border tw-border-container tw-px-3 tw-align-middle tw-whitespace-nowrap;
 }
 
 .table-filters th {
-    @apply bg-container border-container whitespace-nowrap;
+    @apply tw-bg-container tw-border-container tw-whitespace-nowrap;
 
     input {
-        @apply bg-auto bg-container-lighter block border-transparent focus:bg-white focus:border-gray-500 mt-1 rounded-md w-full
+        @apply tw-bg-auto tw-bg-container-lighter tw-block tw-border-transparent focus:tw-bg-white focus:tw-border-gray-500 tw-mt-1 tw-rounded-md tw-w-full
     }
 }

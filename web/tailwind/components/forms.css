@@ -1,24 +1,24 @@
 
 .hyva-admin-grid {
     input, select {
-        @apply text-base;
-        @apply border-container-darker;
+        @apply tw-text-base;
+        @apply tw-border-container-darker;
 
-        @apply bg-white;
-        @apply border;
-        @apply hover:bg-container-lighter;
-        @apply items-center;
-        @apply py-2;
+        @apply tw-bg-white;
+        @apply tw-border;
+        @apply hover:tw-bg-container-lighter;
+        @apply tw-items-center;
+        @apply tw-py-2;
 
-        @apply rounded-md;
-        @apply text-primary-lighter;
+        @apply tw-rounded-md;
+        @apply tw-text-primary-lighter;
     }
 
     [type="checkbox"] {
-        @apply box-border;
-        @apply p-0;
-        @apply w-6;
-        @apply h-6;
+        @apply tw-box-border;
+        @apply tw-p-0;
+        @apply tw-w-6;
+        @apply tw-h-6;
     }
 
     .form-checkbox:checked {
@@ -31,6 +31,6 @@
     }
 
     .form-select {
-        @apply cursor-pointer;
+        @apply tw-cursor-pointer;
     }
 }

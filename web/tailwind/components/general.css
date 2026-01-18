@@ -5,8 +5,8 @@
 .hyva-admin-grid {
     font-size: 14px;
     line-height: 16px;
-    @apply antialiased;
-    @apply text-black text-sans-serif leading-normal tracking-normal;
+    @apply tw-antialiased;
+    @apply tw-text-black text-sans-serif tw-leading-normal tw-tracking-normal;
 }
 
 .menu-wrapper .logo .logo-img { display: inline; }
