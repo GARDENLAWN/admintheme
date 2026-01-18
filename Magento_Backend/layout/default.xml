@@ -4,6 +4,11 @@
         <css src="css/gardenlawn-admin.css"/>
     </head>
     <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_image_src" xsi:type="string">images/logo-sygnet-transparent.svg</argument>
+            </arguments>
+        </referenceBlock>
         <move element="notification.messages" destination="header" before="user"/>
     </body>
 </page>

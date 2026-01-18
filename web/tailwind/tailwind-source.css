@@ -66,6 +66,19 @@
     .type-audio { @apply bg-purple-600; }
     .type-video { @apply bg-pink-600; }
     .type-default { @apply bg-gray-400; }
+
+    /* Admin Logo Fix */
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .logo-img {
+        display: block !important;
+        margin: 0 auto !important;
+    }
 }
 
 /* Admin Fixes (Restore Magento styles broken by Preflight) */

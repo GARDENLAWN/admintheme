@@ -1896,6 +1896,17 @@
   .type-default {
     background-color: var(--color-gray-400);
   }
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .logo-img {
+    display: block !important;
+    margin: 0 auto !important;
+  }
 }
 @layer base {
   h1, h2, h3, h4, h5, h6 {
