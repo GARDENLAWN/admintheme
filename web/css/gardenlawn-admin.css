@@ -483,6 +483,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-64 {
+    max-height: calc(var(--spacing) * 64);
+  }
   .max-h-\[300px\] {
     max-height: 300px;
   }
@@ -521,6 +524,9 @@
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
+  }
+  .w-48 {
+    width: calc(var(--spacing) * 48);
   }
   .w-\[90px\] {
     width: 90px;
