@@ -1,15 +1,9 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/styles.css"/>
+    </head>
     <body>
-        <!--
-            [FIX] Notification Messages Reorder Fix for Admin Panel
-            Problem: 'notification.messages' próbuje się reorderować względem 'user'.
-            W domyślnym layoutcie admina (vendor/magento/module-backend/view/adminhtml/layout/default.xml),
-            'user' jest bezpośrednim dzieckiem 'header'.
-            Błąd sugeruje, że 'notification.messages' jest w 'header.inner.right', a 'user' w 'header'.
-
-            Rozwiązanie: Przenosimy 'notification.messages' do 'header', aby oba elementy miały tego samego rodzica.
-        -->
         <move element="notification.messages" destination="header" before="user"/>
     </body>
 </page>
