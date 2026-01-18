@@ -38,13 +38,34 @@
     }
 
     .action-btn.primary {
-        /* Use the theme color name directly */
-        @apply bg-primary text-white border-transparent hover:bg-primary-dark;
+        @apply bg-[var(--color-primary)] text-white border-transparent hover:bg-[var(--color-primary-dark)];
     }
 
     .action-btn.secondary {
         @apply bg-white text-gray-800 border-gray-300 hover:bg-gray-50;
     }
+
+    /* Attachment Styles */
+    .attachment-card {
+        @apply flex items-center px-4 py-3 bg-gray-100 border border-gray-300 rounded no-underline text-gray-800 hover:bg-gray-200 transition-colors;
+    }
+
+    .att-icon {
+        @apply mr-3 w-8 h-8 flex items-center justify-center rounded text-white font-bold text-xs;
+    }
+
+    /* File Type Colors */
+    .type-pdf { @apply bg-red-600; }
+    .type-image { @apply bg-blue-500; }
+    .type-word { @apply bg-blue-700; }
+    .type-excel { @apply bg-green-600; }
+    .type-powerpoint { @apply bg-orange-600; }
+    .type-archive { @apply bg-yellow-500 text-black; }
+    .type-code { @apply bg-gray-800; }
+    .type-text { @apply bg-gray-500; }
+    .type-audio { @apply bg-purple-600; }
+    .type-video { @apply bg-pink-600; }
+    .type-default { @apply bg-gray-400; }
 }
 
 /* Admin Fixes (Restore Magento styles broken by Preflight) */
