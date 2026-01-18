@@ -4,29 +4,145 @@
 
 /* Custom Admin Styles */
 .mailsync-outlook {
-    @apply flex h-screen bg-white border border-gray-300 overflow-hidden;
+    @apply tw-flex tw-h-[calc(100vh-100px)] tw-bg-white tw-border tw-border-gray-300 tw-overflow-hidden tw-font-sans;
 }
 
 .mailsync-sidebar {
-    @apply w-64 bg-gray-100 border-r border-gray-200 flex flex-col;
+    @apply tw-w-64 tw-bg-gray-50 tw-border-r tw-border-gray-200 tw-flex tw-flex-col;
+}
+
+.mailsync-sidebar-header {
+    @apply tw-p-4;
+}
+
+.mailsync-folders-list {
+    @apply tw-flex-1 tw-overflow-y-auto tw-py-2;
 }
 
 .mailsync-folder-item {
-    @apply px-6 py-3 cursor-pointer flex items-center gap-3 text-gray-700 text-sm hover:bg-gray-200;
+    @apply tw-px-4 tw-py-2 tw-mx-2 tw-rounded-md tw-cursor-pointer tw-flex tw-items-center tw-gap-3 tw-text-gray-700 tw-text-sm tw-transition-colors hover:tw-bg-gray-200;
 }
 
 .mailsync-folder-item.active {
-    @apply bg-gray-200 font-bold text-black;
+    @apply tw-bg-blue-100 tw-text-blue-700 tw-font-semibold;
+}
+
+.mailsync-folder-item .folder-icon {
+    @apply tw-text-lg;
+}
+
+.mailsync-message-list {
+    @apply tw-w-[350px] tw-border-r tw:border-gray-200 tw-flex tw-flex-col tw-bg-white;
+}
+
+.mailsync-list-header {
+    @apply tw-p-3 tw-border-b tw-border-gray-200 tw-bg-gray-50;
+}
+
+.mailsync-list-content {
+    @apply tw-flex-1 tw-overflow-y-auto;
+}
+
+.mailsync-message-item {
+    @apply tw-p-4 tw-border-b tw-border-gray-100 tw-cursor-pointer tw-transition-all hover:tw-bg-gray-50 hover:tw-shadow-sm;
+}
+
+.mailsync-message-item.active {
+    @apply tw-bg-blue-50 tw-border-l-4 tw-border-l-blue-500;
+}
+
+.mailsync-message-item.unread .msg-subject {
+    @apply tw-font-bold tw-text-black;
+}
+
+.mailsync-message-item.unread .msg-sender {
+    @apply tw-font-semibold tw-text-black;
+}
+
+.msg-sender {
+    @apply tw-text-sm tw-text-gray-900 tw-mb-1 tw-truncate;
+}
+
+.msg-subject {
+    @apply tw-text-sm tw-text-gray-600 tw-mb-1 tw-truncate;
+}
+
+.msg-preview {
+    @apply tw-text-xs tw-text-gray-500 tw-truncate;
+}
+
+.msg-date {
+    @apply tw-text-xs tw-text-gray-400 tw-text-right tw-mt-1;
+}
+
+.mailsync-message-view {
+    @apply tw-flex-1 tw-overflow-y-auto tw-bg-white tw-p-8 tw:relative;
+}
+
+.empty-state {
+    @apply tw-flex tw-flex-col tw-items-center tw:justify-center tw-h-full tw-text-gray-400;
+}
+
+.message-detail {
+    @apply tw-max-w-4xl tw-mx-auto;
+}
+
+.message-header {
+    @apply tw-mb-6 tw-border-b tw-border-gray-200 tw-pb-6;
+}
+
+.message-subject {
+    @apply tw-text-2xl tw-font-semibold tw-text-gray-900 tw-mb-4;
+}
+
+.message-meta {
+    @apply tw-flex tw-items-start tw-gap-4;
+}
+
+.sender-avatar {
+    @apply tw-w-10 tw-h-10 tw-bg-blue-600 tw-text-white tw-rounded-full tw-flex tw-items-center tw-justify-center tw-text-sm tw-font-bold tw-uppercase;
+}
+
+.meta-info {
+    @apply tw-flex-1;
+}
+
+.sender-name {
+    @apply tw-font-semibold tw-text-gray-900;
+}
+
+.message-date {
+    @apply tw-text-gray-500 tw-text-xs;
+}
+
+.message-body {
+    @apply tw-text-sm tw-leading-relaxed tw-text-gray-800 tw-mb-8;
+}
+
+.message-attachments {
+    @apply tw-border-t tw-border-gray-200 tw-pt-4;
+}
+
+.attachment-card {
+    @apply tw-flex tw-items-center tw-px-3 tw-py-2 tw-bg-gray-50 tw-border tw-border-gray-200 tw-rounded tw-text-sm tw-text-gray-700 hover:tw-bg-gray-100 tw-no-underline;
 }
 
 .action-btn {
-    @apply px-4 py-2 rounded font-semibold cursor-pointer border transition-colors;
+    @apply tw-px-4 tw-py-2 tw-rounded-md tw-font-medium tw-text-sm tw-cursor-pointer tw-border tw-transition-colors tw-inline-flex tw-items-center tw-justify-center tw-gap-2;
 }
 
 .action-btn.primary {
-    @apply bg-orange-600 text-white border-transparent hover:bg-orange-700;
+    @apply tw-bg-blue-600 tw-text-white tw-border-transparent hover:tw-bg-blue-700;
 }
 
 .action-btn.secondary {
-    @apply bg-white text-gray-800 border-gray-300 hover:bg-gray-50;
+    @apply tw-bg-white tw-text-gray-700 tw-border-gray-300 hover:tw-bg-gray-50;
+}
+
+.compose-view {
+    @apply tw-bg-white tw-h-full tw-flex tw-flex-col;
+}
+
+.compose-header {
+    @apply tw-text-lg tw-font-semibold tw-mb-4 tw-pb-2 tw-border-b tw-border-gray-200;
 }
