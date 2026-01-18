@@ -8,7 +8,11 @@ const magento = {
     }
 }
 module.exports = {
-    purge: ["../../../../../../Hyva*/**/adminhtml/templates/**/*.phtml"],
+    purge: [
+        "../../../../../../../vendor/hyva-themes/module-magento2-admin/view/adminhtml/templates/**/*.phtml",
+        "../../**/*.phtml",
+        "../../../../../../code/GardenLawn/**/view/adminhtml/templates/**/*.phtml"
+    ],
     darkMode: false,
     theme: {
         fontSize: {
