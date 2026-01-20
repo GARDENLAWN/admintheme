@@ -19,7 +19,8 @@
         "gardenlawn/module-admincommands": "*",
         "gardenlawn/company": "*",
         "gardenlawn/mediagallery": "*",
-        "gardenlawn/module-mailsync": "*"
+        "gardenlawn/module-mailsync": "*",
+        "gardenlawn/module-google-ads": "*"
     },
     "autoload": {
         "files": [
