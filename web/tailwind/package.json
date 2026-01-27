@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "npx tailwindcss -i tailwind-source.css -o ../css/gardenlawn-admin.css",
-    "watch": "npx tailwindcss -i tailwind-source.css -o ../css/gardenlawn-admin.css --watch"
+    "watch": "npx tailwindcss -i tailwind-source.css -o ../css/gardenlawn-admin.css --watch",
+    "clean-npm": "npm config delete python && npm config delete python -g",
+    "clean-npm-cache": "npm cache clean --force",
+    "clean-all": "rm -rf node_modules && rm package-lock.json && npm cache clean --force",
+    "clean-all-and-install": "rm -rf node_modules && rm package-lock.json && npm cache clean --force && npm install"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.0",
