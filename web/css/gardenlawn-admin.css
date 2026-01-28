@@ -726,8 +726,8 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
-  .max-w-\[90vw\] {
-    max-width: 90vw;
+  .max-w-\[95vw\] {
+    max-width: 95vw;
   }
   .max-w-\[200px\] {
     max-width: 200px;
