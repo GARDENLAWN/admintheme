@@ -402,6 +402,18 @@
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
+  .col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+  .col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+  .col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+  .col-span-8 {
+    grid-column: span 8 / span 8;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -810,9 +822,6 @@
   .rotate-2 {
     rotate: 2deg;
   }
-  .rotate-180 {
-    rotate: 180deg;
-  }
   .\!transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,) !important;
   }
@@ -842,6 +851,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -1962,6 +1974,19 @@
   }
   .ring-inset {
     --tw-ring-inset: inset;
+  }
+  .group-open\:line-clamp-none {
+    &:is(:where(.group):is([open], :popover-open, :open) *) {
+      overflow: visible;
+      display: block;
+      -webkit-box-orient: horizontal;
+      -webkit-line-clamp: unset;
+    }
+  }
+  .group-open\:rotate-180 {
+    &:is(:where(.group):is([open], :popover-open, :open) *) {
+      rotate: 180deg;
+    }
   }
   .group-focus-within\:text-blue-500 {
     &:is(:where(.group):focus-within *) {
